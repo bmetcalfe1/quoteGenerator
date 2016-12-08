@@ -4,7 +4,7 @@ $(document).ready(function() {
   var currentAuthor = '';
 
   function openURL(url){
-    window.open(url, 'Share', 'width=550, height=400, toolbar=0, scrollbars=1 ,location=0 ,statusbar=0,menubar=0, resizable=0');
+    window.open(url);
   }
 
   function getQuote() {

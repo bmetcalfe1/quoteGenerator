@@ -1,0 +1,29 @@
+body{
+    background-image:url('coffee.png');
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.quote-box {
+	text-align: center;
+	padding-top: 25%;
+	padding-left: 15%;
+	padding-right: 15%;
+}
+
+.quote-text {
+	color: white;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.quote-author {
+	color: white;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+.buttons {
+	padding: 2%;
+}
