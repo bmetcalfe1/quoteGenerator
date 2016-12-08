@@ -1,8 +1,3 @@
-// **TO DO**
-// - A link to the quote author on Wikipedia is dynamically generated with every quote.
-// - With the tweet feature in mind, I only return quotes that can fit within Twitter’s 140-character limit.
-// - fix styling on mobile version
-
 $(document).ready(function() {
 
   var currentQuote = '';
@@ -31,20 +26,19 @@ $(document).ready(function() {
     });
   }
 
-  function tweetQuote() {
-    openURL('https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + currentQuote + '" ' + currentAuthor));
+  function quoteWiki() {
+    var quoteUrl = 'https://en.wikipedia.org/wiki/' + currentAuthor.trim().replace(/\s/g, '_');
+    openURL(quoteUrl);
   }
 
-  function quoteWiki() {
-    console.log(currentAuthor);
-    //i should prob rewrite urls , store as variables
-    openURL('https://en.wikipedia.org/wiki/' + currentAuthor.trim().replace(/\s/g, '_'));
+  function tweetQuote() {
+    var tweetUrl = 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + currentQuote + '" ' + currentAuthor);
+    openURL(tweetUrl);
   }
 
   getQuote();
   $('#new-quote').on('click', getQuote);
   $('#quote-wiki').on('click', quoteWiki);
   $('#tweet-quote').on('click', tweetQuote);
-
 
 });
